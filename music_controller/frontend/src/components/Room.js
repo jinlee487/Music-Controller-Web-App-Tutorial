@@ -21,7 +21,9 @@ export default class Room extends Component {
           guestCanPause: data.guest_can_pause,
           isHost: data.is_host,
         });
-      });
+      })
+      .catch(err => { console.log(err.toString()); });
+
   }
 
   render() {
